@@ -19,25 +19,45 @@
          <ul id="menu">
             <!-- recuerda que están en espejo -->
             <li><a href="#">Reserva</a></li>
-            <li><a href="#">Carta</a></li>
             <li><a href="#">Home</a></li>
         </ul>
     </div>
     
-    <div class="cuerpo">
-        <!-- modifique los valores aquí presentes para ajustar la imagen al centro-->
-            <!--<img src="imagenes/placeholder.png" height="100%" width="100%" />-->
-    <!--PDF DEL MENÚ-->
-  <span>PDF DEL MENU: 
-  <!--Link de dercarga del menú-->
-  <a href="menu_combinado_london.pdf" download="MenuLondon2022">
-    Descargar archivo
-  </a> </span>
-  
-    <div id="pdf">         <!--linea de codigo # oculta la barra de herramientas-->
-    <iframe src="menu_combinado_london.pdf#toolbar=0&navpanes=0" width="100%;" height="100%" ></iframe>
+    <div id="cabecera">
+       <!-- Declaracion audios por ID -->
+      
+        <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
+            <source src="Sonidos/pagina.mp3" type="audio/mpeg">
+        </audio>
 
-    <!-- <embed src="../resources/menu_combinado_london.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="100%" /> -->
+        <audio id="audiovino"> <!-- Declaracion audio Vino -->
+            <source src="Sonidos/vino.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Declaracion Enlaces -->
+        <a href="menubrasaslondon.pdf" target="_blank" onclick="playCarta()">
+            <div id="cartacomida"><p>Carnes</p></div>
+        </a>
+
+        <a href="carta vinos brasas london.pdf" target="_blank" onclick="playVino()">
+            <div id="cartavino"><p>Vinos</p></div>
+        </a>
+
+        <!-- target="_blank" para abrir pdf en una nueva ventana y onclick="llamada a la funcion reproducir" para ejecutar el sonido al hacer click-->
+
+        <script>
+            // Asignacion variables a audios declarados por IDS mas arriba
+            var x = document.getElementById("audiocarta");
+            var z = document.getElementById("audiovino");
+            // Creacion Funciones para reproducir sonidos
+            function playCarta() {
+                x.play(); //reproduce la variable con el sonido
+            }
+            function playVino(){
+                z.play() //reproduce la variable con el sonido
+            }
+
+        </script>
     </div>
     
     <div class="pie">

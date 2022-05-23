@@ -128,3 +128,83 @@
     /*position:absolute;*/
 
   }
+
+
+  #cabecera {
+    padding: 80px 0px;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display:flex;
+    justify-content: center;
+  }
+  /* Edicion de los div del menu (2) */
+  #cabecera a div {
+    float:left;
+    width:300px;
+    height:300px;
+  }
+  
+/* Edicion del de la carta de comida */
+  #cabecera a #cartacomida{
+    background-image: url(../assets/img/event-custom.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position:relative;
+    
+  }
+
+  #cabecera a #cartacomida p{
+    text-align: center;
+    position:absolute;
+    top:45%;
+    left:45%;
+    color:white;
+    background-color: #7c7c7c;
+    padding:2px;
+    
+  }
+
+  #cabecera a #cartavino{
+    background-image: url(../assets/img/vino.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left:30px;
+    background-position: center center;
+    position:relative;
+    
+  }
+
+  #cabecera a #cartavino p{
+    padding:2px;
+    text-align: center;
+    position:absolute;
+    top:45%;
+    left:45%;
+    color:white;
+    background-color: #7c7c7c;
+    
+  }
+
+  #cabecera a #cartashisha{
+    margin-left: 30px;
+    background-image: url(../assets/img/shisha.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position:relative;
+    
+  }
+
+  #cabecera a #cartashisha p{
+    text-align: center;
+    position:absolute;
+    top:45%;
+    left:45%;
+    color:white;
+    background-color: #7c7c7c;
+    padding:2px;
+    
+  }

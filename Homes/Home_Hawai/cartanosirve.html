@@ -60,55 +60,27 @@
   <main id="main">
 
     <!-- ======= Breadcrumbs ======= -->
-    <div id="cabecera">
-       <!-- Declaracion audios por ID -->
-      
-        <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
-            <source src="assets/sonidos/pagina.mp3" type="audio/mpeg">
-        </audio>
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
 
-        <audio id="audioshisha"> <!-- Declaracion audio Vino -->
-          <source src="assets/sonidos/shisha.mp3" type="audio/mpeg">
-        </audio>
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li>Carta</li>
+        </ol>
+        <h2>Carta</h2>
 
-        <audio id="audiovino"> <!-- Declaracion audio Vino -->
-          <source src="assets/sonidos/vino.mp3" type="audio/mpeg">
-      </audio>
+      </div>
+    </section><!-- End Breadcrumbs -->
 
-        <!-- Declaracion Enlaces -->
-        <a href="assets/pdf/menuhawaiishushi.pdf" target="_blank" onclick="playCarta()">
-            <div id="cartacomida" ><p>Shushi</p></div>
-        </a>
-      
-        <a href="assets/pdf/carta vinos hawaii.pdf" target="_blank" onclick="playVino()">
-          <div id="cartavino"><p>Vinos</p></div>
-        </a>
-
-        <a href="assets/pdf/shishasHawaii.pdf" target="_blank" onclick="playShisha()">
-          <div id="cartashisha"><p>Shishas</p></div>
-      </a>
-
-        <!-- target="_blank" para abrir pdf en una nueva ventana y onclick="llamada a la funcion reproducir" para ejecutar el sonido al hacer click-->
-
-        <script>
-            // Asignacion variables a audios declarados por IDS mas arriba
-            var x = document.getElementById("audiocarta");
-            var z = document.getElementById("audiovino");
-            var y = document.getElementById("audioshisha");
-            // Creacion Funciones para reproducir sonidos
-            function playCarta() {
-                 x.play(); //reproduce la variable con el sonido
-             }
-             function playVino(){
-                 z.play() //reproduce la variable con el sonido
-             }
-
-             function playShisha(){
-                 y.play() //reproduce la variable con el sonido
-             }
-
-        </script>
-    </div>
+    <section class="inner-page">
+      <div class="container">
+        <div class="container_img">
+          <a href="assets/pdf/menuhawaii.pdf"><img class="container_img1" src="../../imagenes_cartas/carnebrasa1.jpg"></a>
+          <a href="assets/pdf/menuhawaiishushi.pdf"><img class="container_img1" src="../../imagenes_cartas/sushi.png"></a>
+          <a href="assets/pdf/carta vinos hawaii.pdf"><img class="container_img1" src="../../imagenes_cartas/vino.jpg"></a>
+        </div>
+      </div>
+    </section>
 
   </main><!-- End #main -->
 
@@ -139,8 +111,34 @@
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
+  <!-- Declaracion audios por ID -->
+      
+  <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
+    <source src="assets/sonidos/pagina.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="audioshisha"> <!-- Declaracion Audio Shisha -->
+      <source src="assets/sonidos/shisha.mp3" type="audio/mpeg">
+  </audio>
+
+  <audio id="audiovino"> <!-- Declaracion audio Vino -->
+      <source src="assets/sonidos/vino.mp3" type="audio/mpeg">
+  </audio>
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    // Asignacion variables a audios declarados por IDS mas arriba
+    var x = document.getElementById("audiocarta");
+    var z = document.getElementById("audiovino");
+    // Creacion Funciones para reproducir sonidos
+    function playCarta() {
+        x.play(); //reproduce la variable con el sonido
+    }
+    function playVino(){
+        z.play() //reproduce la variable con el sonido
+    }
+</script>
 
 </body>
 

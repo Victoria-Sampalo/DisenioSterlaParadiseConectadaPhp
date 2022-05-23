@@ -22,12 +22,54 @@
         </ul>
     </div>
     
-    <div class="cuerpo">
-        <!-- modifique los valores aquí presentes para ajustar la imagen al centro-->
-            <!--<img src="imagenes/placeholder.png" height="100%" width="100%" />-->
-    <div id="pdf">         <!--linea de codigo # oculta la barra de herramientas-->
-      <embed src="resources/menucompletoMARBELLA.pdf#toolbar=0&navpanes=0&scrollbar=0" type="application/pdf" width="100%" height="600px" />
-    </div>
+    <div id="cabecera">
+        <!-- Declaracion audios por ID -->
+       
+         <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
+             <source src="Sonidos/pagina.mp3" type="audio/mpeg">
+         </audio>
+ 
+         <audio id="audioshisha"> <!-- Declaracion audio Vino -->
+             <source src="assets/sonidos/shisha.mp3" type="audio/mpeg">
+         </audio>
+
+         <audio id="audiovino"> <!-- Declaracion audio Vino -->
+            <source src="assets/sonidos/vino.mp3" type="audio/mpeg">
+        </audio>
+ 
+         <!-- Declaracion Enlaces -->
+         <a href="resources/menujardinmarbella.pdf" target="_blank" onclick="playCarta()">
+             <div id="cartacomida"><p>Carnes</p></div>
+         </a>
+ 
+         <a href="resources/carta vinos marbella.pdf" target="_blank" onclick="playVino()">
+             <div id="cartavino"><p>Vinos</p></div>
+         </a>
+         
+         <a href="resources/shishasMarbella.pdf" target="_blank" onclick="playShisha()">
+            <div id="cartashisha"><p>Shishas</p></div>
+        </a>
+         <!-- target="_blank" para abrir pdf en una nueva ventana y onclick="llamada a la funcion reproducir" para ejecutar el sonido al hacer click-->
+ 
+         <script>
+             // Asignacion variables a audios declarados por IDS mas arriba
+             var x = document.getElementById("audiocarta");
+             var z = document.getElementById("audiovino");
+             var y = document.getElementById("audioshisha");
+             // Creacion Funciones para reproducir sonidos
+             function playCarta() {
+                 x.play(); //reproduce la variable con el sonido
+             }
+             function playVino(){
+                 z.play() //reproduce la variable con el sonido
+             }
+
+             function playShisha(){
+                 y.play() //reproduce la variable con el sonido
+             }
+ 
+         </script>
+     </div>
 
     </div>
     
