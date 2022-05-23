@@ -52,6 +52,7 @@ http://www.templatemo.com/tm-507-victory
                         <li><a href="menu.html">Carta</a></li>
                         <li><a href="reservar.php">Reserva</a></li>
                         <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="../Home/Index.html">Volver a Sterlas Paradise</a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->

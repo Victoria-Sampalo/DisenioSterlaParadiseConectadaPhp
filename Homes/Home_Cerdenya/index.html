@@ -48,6 +48,7 @@ http://www.templatemo.com/tm-507-victory
                         <li><a href="menu.html">Carta</a></li>
                         <li><a href="reservar.php">Reserva</a></li>
                         <li><a href="contact.html">Contacto</a></li>
+                        <li><a href="../Home/Index.html">Volver a Sterlas Paradise</a></li>
                     </ul>
                 </div>
                 <!--/.navbar-collapse-->
@@ -72,7 +73,7 @@ http://www.templatemo.com/tm-507-victory
                          selección de sabores y variedad gastronómica, platos exquisitos, 
                          originales que representan lo mejor de la cocina italiana y mediterránea.</p>
                     <div class="primary-button">
-                        <a href="#" class="scroll-link" data-id="book-table">Reserva</a>
+                        <a href="reservar.php" class="scroll-link" data-id="book-table">Reserva</a>
                     </div>
                 </div>
             </div>
@@ -138,90 +139,6 @@ http://www.templatemo.com/tm-507-victory
         </div>
     </section>
 
-
-
-    <section id="book-table">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="heading">
-                        <h2>Reserve su mesa</h2>
-                    </div>
-                </div>
-                <div class="col-md-4 col-md-offset-2 col-sm-12">
-                    <div class="left-image">
-                        <img src="img/book_left_image.jpg" alt="">
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-12">
-                    <div class="right-info">
-                        <h4>Reserva</h4>
-                        <form id="form-submit" action="reservar2.php" method="get">
-                            <div class="row">
-                                <div class="col-md-6"> 
-                                    <!-- CALENDARIO RESERVA PRIMERA PARTE-->
-                                    <div class="calendar"></div>
-                                    <label for="start">Día:</label>
-                                   
-            <input type="date" id="start" name="trip-start"
-       value="2018-07-22"
-       min="2022-05-01" max="2022-08-31">
-    </div>
-                                   
-                                </div>
-                                <div class="col-md-6">
-                                    <fieldset>
-                                        <select required name='hour' onchange='this.form.()'>
-                                        <optgroup label="Almuerzo">
-
-                                            <option value="13-00">13:00</option>
-                                            <option value="13-30">13:30</option>
-                                            <option value="14-00">14:00</option>
-                                            <option value="14-30">14:30</option>
-                                            <option value="15-00">15:00</option>
-                                        </optgroup>
-                                    
-                                        <optgroup label="Cenas">
-                                            <option value="19-00">19:00</option>
-                                            <option value="19-30">19:30</option>
-                                            <option value="20-00">20:00</option>
-                                            <option value="20-30">20:30</option>
-                                            <option value="21-00">21:00</option>
-                                            <option value="21-30">21:30</option>
-                                            <option value="22-00">22:00</option>
-                                        </optgroup>
-                                        </select>
-                                    </fieldset>
-                                </div>
-                                 <div class="col-md-6">
-                                    <fieldset>
-                                        <select required class="person" name='persons' onchange='this.form.()'>
-                                            <option value="1">1 Persona</option>
-                                            <option value="2">2 Personas</option>
-                                            <option value="3">3 Personas</option>
-                                            <option value="4">4 Personas</option>
-                                            <option value="5">5 Personas</option>
-                                            <option value="6">6 Personas</option>
-                                            <option value="7">7 Personas</option>
-                                            <option value="8">8 Personas</option>
-                                            <option value="9">9 Personas</option>
-                                        </select>
-                                    </fieldset>
-                                 <!--  <div>
-                                    <p>*Si su reserva es para más de 9 personas póngase en contacto con nosotros.</p>
-                                </div> -->
-                                </div>
-                                <div class="col-md-6" id="botonreservar">
-                                    <fieldset>
-                                        <button type="submit" id="form-submit" class="btn">Continuar</button>
-                                    </fieldset>
-                                </div>
-                            </form>
-                            </div>                      
-                    </div>
-                </div>
-            </div>
-    </section>
 
 
 <!--
