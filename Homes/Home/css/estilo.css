@@ -1,0 +1,81 @@
+html {
+    box-sizing: border-box;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+body {
+    background-color: black;
+    background-size: cover;
+}
+
+#central {
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/***************+MENU***************/
+
+
+#restaurantes{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#brasas{
+    background-image: url(../images/logo_brasas_london.png);
+    background-repeat: no-repeat;
+
+}
+
+#brasas:hover{
+    background-image: url(../images/logo_brasas_london_hover.png);
+    background-repeat: no-repeat;
+}
+
+#cerenya{
+    background-image: url(../images/logo_cerdenia.png);
+    background-repeat: no-repeat;
+}
+
+#cerenya:hover{
+    background-image: url(../images/logo_cerdenia_hover.png);
+    background-repeat: no-repeat;
+}
+
+#hawai{
+    background-image: url(../images/logo_hawaii.png);
+    background-repeat: no-repeat;
+}
+
+#hawai:hover{
+    background-image: url(../images/logo_hawaii_hover.png);
+    background-repeat: no-repeat;
+}
+
+#marbella{
+    background-image: url(../images/logo_marbella.png);
+    background-repeat: no-repeat;
+}
+
+#marbella:hover{
+    background-image: url(../images/logo_marbella_hover.png);
+    background-repeat: no-repeat;
+}
+
+.float{
+    float:left;
+}
+
+.tamanio{
+    width:300px;
+    height:300px;
+}
+

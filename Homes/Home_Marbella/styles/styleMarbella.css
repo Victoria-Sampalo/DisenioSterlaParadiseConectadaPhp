@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  
+  html{
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+  
+  body{
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 100%;
+    background-color: rgb(49, 50, 51);
+}
+  
+  .cabecera{
+  background-color: rgb(49, 50, 51);
+  height: 14%;
+  /* si quieres darle una línea blanca al final de la cabecera como separador: border-bottom: white 2px solid;*/
+  position: relative;
+  }
+  
+  #menu{
+    list-style: none;
+    height: 20%;
+  }
+  
+  #menu li > a{
+    background-color: rgb(49, 50, 51);
+    color: white;
+    padding: 5%;
+    display: block;
+    text-decoration: none;
+    display: inline-block;
+    max-width: 100%;
+    text-overflow: ellipsis;
+  }
+  
+  #menu li > a:hover{
+    /* -- Alternativa
+    color: white;
+    background-color: #7c7c7c;
+    */
+    font-weight: 600;
+  
+  }
+  /* Aquí están los principales valores del menú que es usado en la cabecera */
+  #menu > li{
+    float: left;
+    text-align:center;
+    width: calc(80%/3);
+    margin-top: 0.75vw;
+    float: right;
+    font-size: 1.5vw;
+  }
+  
+  .imagen_logo{
+  
+    /* si quieres hacerlo por css: background: url() no-repeat center; */
+    float: left;
+    overflow: hidden;
+    width: 20%;
+    height: 100%;
+  }
+  
+  .imagen_logo img{
+  
+    /* Modifique estos atributos para modificar el margen del logo */
+  
+  margin: 5% 27%;
+  
+  }
+  
+  /* esto es totalmente opcional */
+  
+  .imagen_logo:hover{
+  
+    /* Modifique estos atributos para modificar el color del hover del logo */
+  
+  background-color: #7c7c7c;
+  }
+  
+  .cuerpo{
+  
+  height: 70% ;
+  }
+  
+  .pie{
+    background-color: rgb(49, 50, 51);
+    height: 30%;
+    color: white;
+    clear: both;
+    position:absolute;
+    width: 100%;
+  }
+  
+  
+  /* Estos valores controlan los divs del pie y su contenido */
+  
+  .pie > div{
+  
+  float: left;
+  width: calc(40%/3);
+  padding-left: 15%;
+  padding-top: 1.8%;
+  font-size: 1vw;
+  }
+  
+  .pie > div > ul{
+  
+  list-style: none;
+  
+  }
+  
+  .pie > div > div{
+  
+  font-weight: 600;
+    
+  }
+
+  #pdf{
+    clear: both;
+    /*position:absolute;*/
+
+  }

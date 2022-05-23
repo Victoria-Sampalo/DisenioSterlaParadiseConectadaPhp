@@ -1,0 +1,19 @@
+.realizarRes{
+    padding: 10px 22px;
+    background: black;
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    border-radius: 5px;
+}
+
+.realizarRes:hover{
+    background: #ff7f5d;
+    color: white;
+    transition-delay: 500ms;
+}
+
+.fila{
+    margin-left: 1px;
+    margin-right: 1px;
+}
