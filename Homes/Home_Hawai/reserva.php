@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php 
+    // requerir fichero de conexion
+    require_once '../../inclusiones/conexion.php';
+    require_once '../../acciones/conseguir_zonas.php';
+    require_once '../../acciones/guardar_reserva.php';
+    
+?>
 <html lang="en">
 
 <head>
@@ -26,6 +33,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="../Home/css/button-style.css">
 </head>
 
 <body>
@@ -80,56 +88,85 @@
           garantizar su asistencia.
         </p>
         <section id="reserva" class="reserva">
-          <form action="reserva.html" method="post" role="form" class="php-email-form">
+            <form action="../../acciones/guardar_reserva.php" method="GET" role="form">
+            <input type="hidden" name="restaurante" value="1"/>
             <div class="row">
               <div class="col-md-6 form-group">
-                <select class="form-control" name="zona">
-                  <option class="form-control" name="zona" id="#">Zona</option>
-                  <option class="form-control" name="zona" id="int">Interior</option>
-                  <option class="form-control" name="zona" id="ext">Exterior</option>
+                <select class="form-control" name="zonas">
+                  <option class="form-control" name="zonas" id="#">Zona</option>
+                  <option class="form-control" name="zonas" value="1" id="int">Interior</option>
+                  <option class="form-control" name="zonas" value="2" id="ext">Exterior</option>
                 </select>
               </div>
               <div class="col-md-6 form-group">
                 <select class="form-control" name="numpersonas">
                   <option class="form-control" name="numpersonas">Nº de personas*</option>
-                  <option class="form-control" name="numpersonas" id="1">1</option>
-                  <option class="form-control" name="numpersonas" id="2">2</option>
-                  <option class="form-control" name="numpersonas" id="3">3</option>
-                  <option class="form-control" name="numpersonas" id="4">4</option>
-                  <option class="form-control" name="numpersonas" id="5">5</option>
-                  <option class="form-control" name="numpersonas" id="6">6</option>
-                  <option class="form-control" name="numpersonas" id="7">7</option>
-                  <option class="form-control" name="numpersonas" id="8">8</option>
-                  <option class="form-control" name="numpersonas" id="9">9</option>
+                  <option class="form-control" name="numpersonas" value="1" id="1">1</option>
+                  <option class="form-control" name="numpersonas" value="2" id="2">2</option>
+                  <option class="form-control" name="numpersonas" value="3" id="3">3</option>
+                  <option class="form-control" name="numpersonas" value="4" id="4">4</option>
+                  <option class="form-control" name="numpersonas" value="5" id="5">5</option>
+                  <option class="form-control" name="numpersonas" value="6" id="6">6</option>
+                  <option class="form-control" name="numpersonas" value="7" id="7">7</option>
+                  <option class="form-control" name="numpersonas" value="8" id="8">8</option>
+                  <option class="form-control" name="numpersonas" value="9" id="9">9</option>
                 </select>
               </div>
             </div>
-            <div class="row">
+            <div class="row separacionHawai">
               <div class="col-md-4">
                 <input type="date" class="form-control" name="fecha" placeholder="Fecha" required />
               </div>
               <div class="col-md-8 form-group mt-3 mt-md-0">
                 <select class="form-control" name="hora">
                   <option class="form-control" name="hora" id="#">Hora</option>
-                  <option class="form-control" name="hora" id="12">12:00</option>
-                  <option class="form-control" name="hora" id="1230">12:30</option>
-                  <option class="form-control" name="hora" id="13">13:00</option>
-                  <option class="form-control" name="hora" id="1330">13:30</option>
-                  <option class="form-control" name="hora" id="14">14:00</option>
-                  <option class="form-control" name="hora" id="1430">14:30</option>
-                  <option class="form-control" name="hora" id="15">15:00</option>
-                  <option class="form-control" name="hora" id="1530">15:30</option>
-                  <option class="form-control" name="hora" id="16">16:00</option>
+                  <option class="form-control" name="hora" id="12" value="12:00">12:00</option>
+                  <option class="form-control" name="hora" id="1230" value="12:30">12:30</option>
+                  <option class="form-control" name="hora" id="13" value="13:00">13:00</option>
+                  <option class="form-control" name="hora" id="1330" value="13:30">13:30</option>
+                  <option class="form-control" name="hora" id="14" value="14:00">14:00</option>
+                  <option class="form-control" name="hora" id="1430" value="14:30">14:30</option>
+                  <option class="form-control" name="hora" id="15" value="15:00">15:00</option>
+                  <option class="form-control" name="hora" id="1530" value="15:30">15:30</option>
+                  <option class="form-control" name="hora" id="16" value="16:00">16:00</option>
                 </select>
               </div>
           </div>
+          <!-- class separacion-->
+          <div class="row separacion">
+            <div class="col-md-6 form-group">
+                <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" maxlength="50" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="text" class="form-control" name="apellidos" id="apellidos" placeholder="Tu apellido" maxlength="50" required>
+            </div>
+        </div>
+        <p></p>
+        <div class="row">
+            <div class="col-md-4">
+                <input type="tel" class="form-control" name="telefono" id="telefono" placeholder="Tu telefono" required />
+            </div>
+            <div class="col-md-8 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="email" id="email" placeholder="Tu email" required>
+            </div>
+        </div> 
           <p></p>
-            <div class="my-3">
+            <!--<div class="my-3">
               <div class="loading">Cargando</div>
               <div class="error-message"></div>
               <div class="sent-message">Tu mensaje ha sido enviado.</div>
             </div>
-            <div class="text-center"><button type="submit">Reservar</button></div>
+            <div class="text-center"><button type="submit">Reservar</button></div>-->
+            
+            <!-- IMPORTANTE
+                    cambiar estilos
+            
+            <div><button type="submit">Reservar</button></div>-->
+            
+            <!-- class realizarRes-->
+            <div class="text-center">
+                <button type="submit" name="enviar" class="realizarRes">Reservar</button>
+            </div>
           </form>
           <p></p>
           <p>* Para reservas de más de 9 personas, contactar por telefono.</p>

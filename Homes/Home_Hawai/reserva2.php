@@ -1,4 +1,12 @@
 <!DOCTYPE html>
+
+<?php 
+    // requerir fichero de conexion
+    require_once '../../../inclusiones/conexion.php';
+    require_once '../../../acciones/conseguir_zonas.php';
+    require_once '../../../acciones/guardar_reserva.php';
+    
+?>
 <html lang="en">
 
 <head>
@@ -79,7 +87,7 @@
                 garantizar su asistencia.
             </p>
             <section id="reserva" class="reserva">
-                <form action="reserva.html" method="post" role="form" class="php-email-form">
+                <form action="../../../acciones/guardar_reserva.php" method="GET" role="form">
                     <div class="row">
                         <div class="col-md-6 form-group">
                             <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre" maxlength="50" required>
@@ -98,14 +106,27 @@
                         </div>
                     </div>
                     <p></p>
+                    <!--
                     <div class="my-3">
                         <div class="loading">Cargando</div>
                         <div class="error-message"></div>
                         <div class="sent-message">Tu mensaje ha sido enviado.</div>
                     </div>
                     <div class="text-center"><button type="submit">Reservar</button></div>
+                    -->
+                    <button type="submit" name="enviar">Enviar</button>
+
                 </form>
             </section>
+            <!-- Se tiene que quitar luego-->
+            <div>
+                <?php
+                echo "<br/>Resultado reserva";
+                var_dump($comprobar);
+                var_dump(mysqli_real_escape_string($db, $sql));
+                var_dump(mysqli_fetch_assoc($comprobar));
+                ?>
+            </div>
         </div>
     </section>
 
