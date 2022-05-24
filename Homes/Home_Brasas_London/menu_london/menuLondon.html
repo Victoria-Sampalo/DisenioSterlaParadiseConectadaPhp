@@ -1,89 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cssLondon.css">
+    <meta charset="utf-8"/>
     <link rel="icon" type="image/x-icon" href="../assets/favicon.ico"/>
     <title>Menu</title>
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet"/>
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/style_index.css" rel="stylesheet"/>
 </head>
-   
-<body>
-    <div class="cabecera">
-        <div class="imagen_logo">
-            <!-- modifique los valores aquí presentes para ajustar el logo al centro-->
-            <a href="../../Home/Index.html"><img src="../assets/img/logo_principal.png" height="65%" width="40%" /></a>
-             
-        </div>
-         <ul id="menu">
-            <!-- recuerda que están en espejo -->
-            <li><a href="#">Reserva</a></li>
-            <li><a href="#">Home</a></li>
-        </ul>
+<body id="page-top">
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="../index.html">Inicio</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
     </div>
-    
-    <div id="cabecera">
-       <!-- Declaracion audios por ID -->
-      
-        <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
-            <source src="Sonidos/pagina.mp3" type="audio/mpeg">
-        </audio>
+</nav>
 
-        <audio id="audiovino"> <!-- Declaracion audio Vino -->
-            <source src="Sonidos/vino.mp3" type="audio/mpeg">
-        </audio>
-
-        <!-- Declaracion Enlaces -->
-        <a href="menubrasaslondon.pdf" target="_blank" onclick="playCarta()">
-            <div id="cartacomida"><p>Carnes</p></div>
-        </a>
-
-        <a href="carta vinos brasas london.pdf" target="_blank" onclick="playVino()">
-            <div id="cartavino"><p>Vinos</p></div>
-        </a>
-
-        <!-- target="_blank" para abrir pdf en una nueva ventana y onclick="llamada a la funcion reproducir" para ejecutar el sonido al hacer click-->
-
-        <script>
-            // Asignacion variables a audios declarados por IDS mas arriba
-            var x = document.getElementById("audiocarta");
-            var z = document.getElementById("audiovino");
-            // Creacion Funciones para reproducir sonidos
-            function playCarta() {
-                x.play(); //reproduce la variable con el sonido
-            }
-            function playVino(){
-                z.play() //reproduce la variable con el sonido
-            }
-
-        </script>
-    </div>
-    
-    <div class="pie">
-    
-        <div class="horario">
-            <div class="titulo">Horario</div>
-            <ul>
-                <li>Lunes a Viernes</li>
-                <li>Sábados</li>
-                <li>Domingos</li>
-            </ul>
+<!-- Masthead (Inicio)-->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        <div class="d-flex justify-content-center">
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">Brasas London</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">De la cadena Sterlas Paradise.</h2>
+                <audio id="audiocarta"> <!-- Declaracion Audio Carta -->
+                    <source src="Sonidos/pagina.mp3" type="audio/mpeg">
+                </audio>
+        
+                <audio id="audiovino"> <!-- Declaracion audio Vino -->
+                    <source src="Sonidos/vino.mp3" type="audio/mpeg">
+                </audio>
+                <a class="btn btn-primary" href="menubrasaslondon.pdf" target="_blank" onclick="playCarta()">Mira nuestra carta</a>
+                <a class="btn btn-primary" href="carta vinos brasas london.pdf" target="_blank" onclick="playVino()">Mira nuestros vinos</a>
+            </div>
         </div>
-    
-        <div class="contacto">
-            <div class="titulo">Contacto</div>
-            <ul>
-                <li>Teléfono</li>
-                <li>Correo Eléctronico</li>
-            </ul>
-        </div>
-    
-        <div>
-            &copy;
-        </div>
-    
     </div>
-    </div>
-    </body>
+</header>
+<!-- Bootstrap core JS-->
+<script>
+    // Asignacion variables a audios declarados por IDS mas arriba
+    var x = document.getElementById("audiocarta");
+    var z = document.getElementById("audiovino");
+    // Creacion Funciones para reproducir sonidos
+    function playCarta() {
+        x.play(); //reproduce la variable con el sonido
+    }
+    function playVino(){
+        z.play() //reproduce la variable con el sonido
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Core theme JS-->
+<script src="js/scripts.js"></script>
+<script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+</body>
 </html>
